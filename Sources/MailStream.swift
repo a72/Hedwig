@@ -149,7 +149,7 @@ class MailStream: NSObject {
             .fileExists(atPath: path, isDirectory: &isDirectory)
         
         #if os(Linux)
-        let directory: Bool = isDirectory
+        let directory: Bool = isDirectory.boolValue
         #else
         let directory: Bool = isDirectory.boolValue
         #endif     
